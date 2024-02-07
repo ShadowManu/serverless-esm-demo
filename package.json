@@ -2,7 +2,8 @@
   "name": "serverless-esm-demo",
   "type": "module",
   "scripts": {
-    "start": "npx ts-node-esm $(npx which serverless) offline start --config serverless.cjs"
+    "start": "npx ts-node-esm $(npx which serverless) offline start --config serverless.cjs",
+    "startv20": "node --loader ts-node/esm $(npx which serverless) offline start --config serverless.cjs"
   },
   "author": "Manuel Pacheco",
   "license": "MIT",
