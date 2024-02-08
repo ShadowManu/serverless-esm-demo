@@ -1,5 +1,13 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
-    "module": "nodenext"
+    "lib": ["ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "outDir": ".dist",
+    "baseUrl": ".",
+    "skipLibCheck": true
   }
 }
