@@ -1,1 +1,3 @@
-module.exports = import("./serverless.esm.js").then(({ config }) => config);
+module.exports = require("jiti")(null, { interopDefault: true })(
+  `${__dirname}/serverless.esm.ts`
+);

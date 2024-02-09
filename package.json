@@ -2,13 +2,21 @@
   "name": "serverless-esm-demo",
   "type": "module",
   "scripts": {
-    "start": "npx ts-node-esm $(npx which serverless) offline start --config serverless.cjs",
-    "startv20": "node --loader ts-node/esm $(npx which serverless) offline start --config serverless.cjs"
+    "build": "tsc --noEmit",
+    "start": "sls offline start --config serverless.cjs",
+    "status": "sls info --config serverless.cjs",
+    "package": "sls package --config serverless.cjs",
+    "deploy": "sls deploy --config serverless.cjs"
   },
   "author": "Manuel Pacheco",
   "license": "MIT",
   "devDependencies": {
+    "@serverless/typescript": "^3.38.0",
+    "@types/aws-lambda": "^8.10.133",
+    "jiti": "^1.21.0",
     "serverless": "^3.38.0",
+    "serverless-better-credentials": "^2.0.0",
+    "serverless-esbuild": "^1.51.0",
     "serverless-offline": "^13.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
